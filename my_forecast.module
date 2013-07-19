@@ -1,0 +1,28 @@
+<?php
+/**
+ * @file
+ * My Forecast module file.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function my_forecast_help($path) {
+  switch ($path) {
+    case 'admin/help#my_forecast':
+      return t('This module provides a block that displays the current weather.');
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function my_forecast_menu() {
+  $items = array();
+  $items['admin/config/myforecast'] = array(
+    'title arguments' => t('Configure My Forecase'),
+    'page callback' => 'my_forecast_admin',
+    'file' => 'my_forecast.admin.inc',
+    'path' => drupal_get_path('module', 'my_forecast') . '/admin',
+  );
+}
