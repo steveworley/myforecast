@@ -27,4 +27,4 @@ git clone https://github.com/steveworley/myforecast.git my_forecast
 git checkout --track tutorial-part-1
 ```
 
-[1] (http://steveworley.me)
+[1]: http://steveworley.me
